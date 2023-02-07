@@ -1,4 +1,4 @@
-# WhosOnline plugin for CakePHP
+# WhosOnline plugin for CakePHP 4.x
 
 ## Installation
 
