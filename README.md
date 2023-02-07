@@ -21,5 +21,5 @@ Add this repo to your repositories key in `composer.json`
 Install it using composer
 
 ```sh
-composer require toggenation/whos-online
+composer require toggenation/whos-online:dev-main
 ```
