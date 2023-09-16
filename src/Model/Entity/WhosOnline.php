@@ -29,7 +29,7 @@ class WhosOnline extends Entity
      *
      * @var array<string, bool>
      */
-    protected $_accessible = [
+    protected array $_accessible = [
         'ip' => true,
         'url' => true,
         'user_id' => true,
