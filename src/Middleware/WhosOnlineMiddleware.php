@@ -85,7 +85,8 @@ class WhosOnlineMiddleware implements MiddlewareInterface
         ];
 
         if ($this->table->exists($conditions)) {
-            $entity = $this->table->find('all', compact('conditions'))->first();
+            $entity = $this->table->find('all')
+                ->where($conditions)->first();
 
             $entity = $this->table->patchEntity($entity, $data + [
                 'modified' => Chronos::now()
