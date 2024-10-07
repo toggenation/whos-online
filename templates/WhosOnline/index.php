@@ -28,11 +28,13 @@
         <?php foreach ($whosOnline as $whosOnline) : ?>
             <tr>
                 <td><?= h($whosOnline->ip) ?></td>
-                <td><?= $whosOnline->has('user') ? $this->Html->link(
+                <td><?= $whosOnline->hasValue('user') ? $this->Html->link(
                         $whosOnline->user->username,
                         [
                             'plugin' => null,
-                            'controller' => 'Users', 'action' => 'view', $whosOnline->user->id
+                            'controller' => 'Users',
+                            'action' => 'view',
+                            $whosOnline->user->id
                         ],
                         ['class' => 'view']
                     ) : ''; ?></td>
@@ -51,7 +53,8 @@
                         ['action' => 'delete', $whosOnline->id],
                         [
                             'confirm' => __('Are you sure you want to delete # {0}?', $whosOnline->id),
-                            'title' => __('Delete'), 'class' => 'btn btn-danger delete'
+                            'title' => __('Delete'),
+                            'class' => 'btn btn-danger delete'
                         ]
                     ) ?>
                 </td>
